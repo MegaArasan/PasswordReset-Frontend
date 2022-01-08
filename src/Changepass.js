@@ -14,10 +14,6 @@ function Updatepassword({ id }) {
       method: "GET",
       headers: { "x-auth-token": id },
     })
-      // .then(
-      //   (res) =>
-      //     res.status === 200 &&
-      // );
       .then((response) => {
         const Status = response.status;
         return Status;
