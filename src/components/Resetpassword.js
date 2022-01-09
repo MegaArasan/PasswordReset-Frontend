@@ -2,6 +2,7 @@ import { TextField, Typography, Button } from "@mui/material";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useParams } from "react-router-dom";
+import { API_URL } from "../../globalconstant.js";
 
 export function Resetpassword() {
   const { id } = useParams();
@@ -20,7 +21,7 @@ export function Resetpassword() {
       },
     });
   const user = (updatepass) => {
-    fetch(`http://localhost:2000/resetpassword`, {
+    fetch(`${API_URL}/resetpassword`, {
       method: "POST",
       body: JSON.stringify(updatepass),
       headers: { "Content-Type": "application/json" },

@@ -5,6 +5,7 @@ import forgot_password from "../forgot_password.jpg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useHistory } from "react-router-dom";
+import { API_URL } from "../globalconstant.js";
 
 export function ForgotPassword() {
   const history = useHistory();
@@ -19,7 +20,7 @@ export function ForgotPassword() {
     },
   });
   const forgotpass = (email) => {
-    fetch(`http://localhost:2000/forgotpassword`, {
+    fetch(`${API_URL}/forgotpassword`, {
       method: "POST",
       body: JSON.stringify(email),
       headers: { "Content-Type": "application/json" },

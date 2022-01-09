@@ -8,6 +8,7 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import InputAdornment from "@mui/material/InputAdornment";
 import { useState } from "react";
+import { API_URL } from "../../globalconstant.js";
 
 export function Login() {
   const [value, setvalue] = useState({ showPassword: false });
@@ -36,7 +37,7 @@ export function Login() {
       },
     });
   const olduser = (userdata) => {
-    fetch(`http://localhost:2000/login`, {
+    fetch(`${API_URL}/login`, {
       method: "POST",
       body: JSON.stringify(userdata),
       headers: { "Content-Type": "application/json" },

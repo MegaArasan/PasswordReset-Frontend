@@ -8,6 +8,7 @@ import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
 import PasswordIcon from "@mui/icons-material/Password";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { API_URL } from "../../globalconstant.js";
 
 export function Signup() {
   const history = useHistory();
@@ -27,7 +28,7 @@ export function Signup() {
       },
     });
   const adduser = (newuser) => {
-    fetch(`http://localhost:2000/signup`, {
+    fetch(`${API_URL}/signup`, {
       method: "POST",
       body: JSON.stringify(newuser),
       headers: { "Content-Type": "application/json" },
