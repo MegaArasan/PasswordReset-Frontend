@@ -2,7 +2,7 @@ import { TextField, Typography, Button } from "@mui/material";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useParams } from "react-router-dom";
-import { API_URL } from "../../globalconstant.js";
+import { API_URL } from "../globalconstant.js";
 
 export function Resetpassword() {
   const { id } = useParams();

@@ -8,7 +8,7 @@ import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
 import PasswordIcon from "@mui/icons-material/Password";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { API_URL } from "../../globalconstant.js";
+import { API_URL } from "../globalconstant.js";
 
 export function Signup() {
   const history = useHistory();

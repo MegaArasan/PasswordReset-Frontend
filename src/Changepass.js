@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { API_URL } from "../globalconstant.js";
+import { API_URL } from "./globalconstant.js";
 
 export function Changepass() {
   const { id } = useParams();
