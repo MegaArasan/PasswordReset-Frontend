@@ -6,7 +6,7 @@ import { API_URL } from "../globalconstant.js";
 
 export function Resetpassword() {
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
   const { handleChange, handleBlur, handleSubmit, values, errors, touched } =
     useFormik({
       initialValues: {
@@ -16,7 +16,7 @@ export function Resetpassword() {
       },
       validationSchema: formvalidationSchema,
       onSubmit: (updatepass) => {
-        console.log(updatepass);
+        // console.log(updatepass);
         user(updatepass);
       },
     });

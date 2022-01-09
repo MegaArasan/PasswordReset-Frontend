@@ -3,13 +3,13 @@ import { API_URL } from "./globalconstant.js";
 
 export function Changepass() {
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
   return id ? <Updatepassword id={id} /> : null;
 }
 // updatpassword
 function Updatepassword({ id }) {
   // const { history } = useHistory();
-  console.log(id);
+  // console.log(id);
   const Result = (id) => {
     fetch(`${API_URL}/forgotpassword/verify`, {
       method: "GET",
